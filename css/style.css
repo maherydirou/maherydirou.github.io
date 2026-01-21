@@ -107,7 +107,7 @@ DROPDOWN
 
   list-style: none;
   padding: 0.5rem 0;
-  min-width: 220px;
+  min-width: 500px;
 
   z-index: 1000;
 }
@@ -192,13 +192,14 @@ DROPDOWN
 }
 
 .project-title {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-bottom: 0.25rem;
 }
 
 .project-meta {
   color: var(--gray);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .project-footer {
@@ -210,29 +211,47 @@ DROPDOWN
 
 .project-block {
   background: var(--light);
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e9ebee;
   border-radius: 12px;
 
-  padding: 1.5rem;
-  margin-top: 1.5rem;
+  padding: 1.4rem;
+  margin-top: 0.8em;
 }
 
 /* Titre de chaque boîte */
 .project-block h4 {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--dark);
+}
+
+.project-block h5 {
+  margin-top: 0.9rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
   color: var(--dark);
 }
 
 /* Texte dans les boîtes */
 .project-block p {
   margin-bottom: 0.75rem;
-  color: var(--gray);
+  color: var(--dark);
+  text-align: justify;
 }
 
 /* Dernier paragraphe sans marge */
 .project-block p:last-child {
   margin-bottom: 0;
+}
+
+.project-block ul {
+  list-style: square;
+  padding-left: 40px;
+}
+
+.project-block ul li::marker {
+  font-size: 1.2rem;
+  color: #020a18;
 }
 
 /*-------------------
@@ -269,7 +288,7 @@ LIST PROJETS
 
 .project-item a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--dark);
 }
 
 .project-item a:hover {
@@ -280,6 +299,10 @@ LIST PROJETS
   color: var(--gray);
 }
 
+.project-description {
+  text-align: justify;
+  width: 100%;
+}
 /* --------------------
    ABOUT & CONTACT
 -------------------- */

@@ -54,6 +54,9 @@ function populateProjectsPage() {
           ${project.name}
         </a>
       </h3>
+      <p class="project-description">
+        ${project.description}
+      </p>
     `;
 
     list.appendChild(article);

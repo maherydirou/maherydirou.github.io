@@ -19,10 +19,7 @@
 
 </head>
 
-<body>
-
-    <script src="../js/projects.js"></script>
-    <script src="../js/main.js"></script>
+<body data-project="project-1">
 
     <!-- Header -->
     <div id="header"></div>
@@ -32,68 +29,96 @@
 
         <!-- FICHE PROJET -->
         <article class="project-card">
-            <!-- ton template projet ici -->
               <!-- En-tête du projet -->
             <header class="project-header">
-                <h3 class="project-title">Nom du projet</h3>
-                <p class="project-meta">Rôle — Dates</p>
+                <h3 class="project-title" id="project-name"></h3>
+                <p class="project-meta">Responsable de l'architecture de la solution python et du code — 22/03/2024</p>
             </header>
 
             <!-- Bloc Contexte & Objectifs -->
             <section class="project-block">
-                <h4>Contexte du projet</h4>
-
-                <p><strong>Équipe :</strong> …</p>
-
+                <h4>CONTEXTE DU PROJET</h4>
+                
+                <h5>Description</h5>
                 <p>
-                <strong>Problématique et enjeux :</strong><br>
-                …
+                    L’optimisation de l’utilisation des ressources est un enjeu central en génie industriel. Dans ce projet, on s’intéresse à un cas concret issu du domaine de l’astronomie : l’ordonnancement des observations sur un télescope.
+                </p> 
+                <p>
+                    Un télescope dispose d’un temps d’observation limité, réparti sur plusieurs nuits, et doit observer un ensemble de cibles astronomiques (étoiles, planètes, nébuleuses, etc.) présentant chacune des caractéristiques propres telles que leur intérêt scientifique, leur position dans le ciel et leur fenêtre de visibilité. À cela s’ajoutent des conditions météorologiques variables selon les nuits, qui influencent directement la qualité des observations.
+                </p>
+                <p>
+                    La planification des observations consiste donc à décider quelle cible observer, à quel moment et durant quelle nuit, tout en respectant les contraintes de visibilité et en tenant compte de l’impact des conditions météorologiques sur la qualité des images obtenues. Ce problème combine des aspects d’ordonnancement, d’optimisation et de prédiction, et s’inscrit pleinement dans les problématiques rencontrées en ingénierie décisionnelle.
+                </p>
+                <p>
+                    Dans ce cadre, le projet vise à développer un logiciel capable de produire automatiquement un planning d’observations pertinent et efficace à partir de données fournies sur les cibles et les nuits.
                 </p>
 
+                <h5>Ressources allouées</h5>
+
                 <p>
-                <strong>Missions principales :</strong><br>
-                …
+                    Le projet est réalisé dans le cadre de l’UE Mathématiques et Informatique Décisionnelles en première année de Génie Industriel. Les principales ressources allouées sont :
                 </p>
+                <ul>
+                    <li>Une équipe de projet de 4 étudiants, travaillant de manière collaborative.</li>
+                    <li>Un temps de travail encadré, comprenant des séances de TD, TP et une semaine bloquée dédiée au développement.</li>
+                    <li>Des données d’entrée fournies, décrivant les caractéristiques des cibles astronomiques et des conditions météorologiques des nuits.</li>
+                    <li>Un historique d’observations, permettant d’entraîner et d’évaluer un modèle de prédiction de la qualité des observations.</li>
+                    <li>Un environnement de développement en Python, avec un squelette de programme et un outil de vérification automatique (checker) pour tester et évaluer les solutions produites.</li>
+                </ul>
+
+
+                <h5>Objectifs du projet</h5>
+                <p>
+                    L’objectif principal du projet est de concevoir et d’implémenter un logiciel d’ordonnancement permettant de maximiser la valeur scientifique des observations réalisées par un télescope. Plus précisément, il s’agit de :
+                </p>
+                <ul>
+                    <li>Développer un algorithme d’ordonnancement capable d’affecter efficacement les cibles aux nuits et aux instants d’observation.</li>
+                    <li>Proposer un modèle de prédiction de la qualité des observations en fonction des caractéristiques des cibles et des conditions météorologiques.</li>
+                    <li>Maximiser le gain total obtenu, défini comme le produit de l’intérêt scientifique des cibles par la qualité des observations.</li>
+                    <li>Produire une solution robuste, conforme aux spécifications imposées et capable de s’exécuter dans un temps limité.</li>
+                </ul>
+
+                <h5>Enjeux</h5>
+                <p>
+                    Les principaux enjeux du projet sont à la fois techniques et méthodologiques :
+                </p>
+                <ul>
+                    <li>Enjeu d’optimisation : trouver un compromis efficace entre contraintes temporelles, conditions météorologiques et intérêt scientifique des cibles.</li>
+                    <li>Enjeu algorithmique : concevoir des méthodes suffisamment performantes pour traiter différentes instances du problème dans un temps de calcul restreint.</li>
+                    <li>Enjeu de qualité logicielle : structurer le code de manière claire, modulaire et maintenable, afin de faciliter le travail en équipe.</li>
+                    <li>Enjeu de prédiction : construire un modèle de qualité pertinent et généralisable à toutes les instances, tout en limitant les erreurs de prédiction.</li>
+                </ul>
             </section>
 
-            <!-- Bloc Actions -->
             <section class="project-block">
-                <h4>Actions</h4>
+                <h4>MA CONTRIBUTION</h4>
 
+                <h5>Missions principales</h5>
                 <p>
-                <strong>Méthodologies :</strong><br>
-                …
+                    En tant que responsable de l’architecture de la solution Python et du code, mes missions principales ont été les suivantes :
                 </p>
 
-                <p>
-                <strong>Décisions clés :</strong><br>
-                …
-                </p>
+                <ul>
+                    <li>Concevoir l’architecture logicielle globale du projet (organisation des fichiers, séparation des responsabilités, modèle objet).</li>
+                    <li>Définir les structures de données utilisées pour représenter les cibles, les nuits et les observations.</li>
+                    <li>Implémenter le programme, notamment la fonction principale d’ordonnancement appelée par le checker.</li>
+                    <li>Veiller à la qualité du code (lisibilité, modularité, commentaires, respect des conventions).</li>
+                    <li>Assurer l’intégration des différents modules développés par l’équipe et la compatibilité avec les spécifications imposées.</li>
+                    <li>Participer à la mise au point et à l’optimisation des algorithmes, ainsi qu’aux phases de test et de validation des résultats.</li>
+                
+                </ul>
+                <h5>Méthodologies</h5>
+                
 
-                <p>
-                <strong>Outils et compétences :</strong><br>
-                …
-                </p>
-            </section>
+                <h5>Décisions clés</h5>
 
-            <!-- Bloc Résultats -->
-            <section class="project-block">
-                <h4>Résultats</h4>
+                <h5>Outils et compétences</h5>
 
-                <p>
-                <strong>Résultats mesurables :</strong><br>
-                …
-                </p>
+                <h5>Résultats mesurables</h5>
 
-                <p>
-                <strong>Impact :</strong><br>
-                …
-                </p>
+                <h5>Impact</h5>
 
-                <p>
-                <strong>Apprentissages :</strong><br>
-                …
-                </p>
+                <h5>Apprentissages</h5>
             </section>
 
             <!-- Liens -->
