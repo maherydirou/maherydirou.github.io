@@ -43,84 +43,137 @@ body {
 
 h1, h2, h3 {
   line-height: 1.2;
+  text-align: center;
 }
 
 /* --------------------
    HEADER / NAV
 -------------------- */
 .header {
-  background: var(--light);
-  border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--light);
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
 }
 
 .logo {
-  font-size: 1.2rem;
-  font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: var(--dark);
-  font-weight: 500;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
 }
 
 .nav-links a:hover {
-  color: var(--primary);
+    color: var(--primary);
+}
+
+/*---------------------
+DROPDOWN
+---------------------*/
+
+.dropdown {
+  position: relative;
+}
+
+/* menu caché */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  display: none;
+
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+
+  list-style: none;
+  padding: 0.5rem 0;
+  min-width: 220px;
+
+  z-index: 1000;
+}
+
+/* affichage au hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.dropdown-menu a:hover {
+  background: #f3f4f6;
 }
 
 /* --------------------
    HERO
 -------------------- */
 .hero {
-  padding: 6rem 0;
+    padding: 6rem 0;
 }
 
 .hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .hero p {
-  color: var(--gray);
-  max-width: 500px;
-  margin-bottom: 2rem;
+    color: var(--gray);
+    max-width: 500px;
+    margin-bottom: 2rem;
 }
 
-.btn {
-  display: inline-block;
-  background: var(--primary);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
+
+.hero-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem auto;
 }
 
-.btn:hover {
-  opacity: 0.9;
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 50%;
 }
 
 /* --------------------
    PROJECTS
 -------------------- */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+.project-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projects-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .project-card {
@@ -135,6 +188,95 @@ h1, h2, h3 {
 }
 
 .project-card p {
+  color: var(--gray);
+}
+
+.project-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.project-meta {
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+.project-footer {
+    text-align: center;
+}
+/* --------------------
+   BOÎTES PROJET
+-------------------- */
+
+.project-block {
+  background: var(--light);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Titre de chaque boîte */
+.project-block h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--dark);
+}
+
+/* Texte dans les boîtes */
+.project-block p {
+  margin-bottom: 0.75rem;
+  color: var(--gray);
+}
+
+/* Dernier paragraphe sans marge */
+.project-block p:last-child {
+  margin-bottom: 0;
+}
+
+/*-------------------
+LIST PROJETS
+--------------------*/
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects-header p {
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0.5rem auto 0;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-item {
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: var(--light);
+}
+
+.project-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project-item a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.project-item a:hover {
+  text-decoration: underline;
+}
+
+.project-summary {
   color: var(--gray);
 }
 
